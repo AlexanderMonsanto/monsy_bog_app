@@ -1,0 +1,22 @@
+<h1>Tagged<small><%= params[:tag] %></small></h1>
+<div class="extra">
+  <% @name.each do |f| %>
+
+  <p><%= link_to f.name, creature_tag_path(f.id) %></p>
+
+  <h1></h1>
+
+
+
+
+
+  <table class="table">
+      <tr>
+      <td><%= f.name %></td>
+      <td><%= f.desc %></td>
+    </tr>
+  </table>
+
+ <% end %>
+
+</div>

@@ -1,0 +1,12 @@
+<h1>Add New Tag</h1>
+
+<div class="form">
+  <%= render :partial => "creatures/partials/flash" %>
+
+  <%= bootstrap_form_for @tags do |f| %>
+    <%= f.text_field  :name %>
+    <%= f.submit "Create" %>
+  <% end %>
+</div>
+
+</div>

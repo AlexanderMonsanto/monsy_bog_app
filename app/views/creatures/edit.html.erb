@@ -1,0 +1,20 @@
+<div class="extra">
+  <h1>Edit Page</h1>
+<div class="form">
+  <% if @creature.errors.any? %>
+    <% @creature.errors.full_messages.each do |error| %>
+      <%= error %>
+      <br>
+    <% end %>
+  <% end %>
+
+  <%= bootstrap_form_for @creature do |f| %>
+    <%= f.text_field :name, placeholder: "Enter Creature Name" %>
+    <%= f.text_area :desc, placeholder: "Enter Description" %>
+    <%= f.text_field :tag_ids, :value => @creature.tags.map{|tag| tag.name }.join(","), 'data-role'=>'tagsinput' %>
+
+    <%= f.submit "Create" %>
+
+  <% end %>
+</div>
+</div>

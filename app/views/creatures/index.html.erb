@@ -1,0 +1,22 @@
+<div class="extra">
+  <div class="row">
+    <div class="col-lg-12 text-center">
+      <h2>The Creatures</h2>
+      <hr class="star-light">
+    </div>
+  </div>
+
+  <%= render :partial => "creatures/partials/flash" %>
+
+  <% @name.each do |f| %>
+
+  <p><%= link_to f.name, creature_path(f.id) %></p>
+
+  <% end %>
+
+</br>
+
+<%= link_to 'Add a Creature', new_creature_path, :class => "btn btn-primary" %>
+
+</div>
+
